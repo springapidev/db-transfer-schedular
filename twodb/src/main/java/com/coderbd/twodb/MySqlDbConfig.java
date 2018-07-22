@@ -34,7 +34,7 @@ public class MySqlDbConfig {
   @Bean(name = "entityManagerFactory")
   public LocalContainerEntityManagerFactoryBean entityManagerFactory(
       EntityManagerFactoryBuilder builder, @Qualifier("dataSource") DataSource dataSource) {
-    return builder.dataSource(dataSource).packages("com.coderbd.twodb.mysql.domain").persistenceUnit("mysql")
+    return builder.dataSource(dataSource).packages("com.coderbd.twodb.mysql.domain").persistenceUnit("foo")
         .build();
   }
 
